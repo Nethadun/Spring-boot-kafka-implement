@@ -17,6 +17,12 @@ public class KafkaController {
         this.kafkaProducer = kafkaProducer;
     }
 
+    /**
+     * Test API
+     * @param message
+     * @return ResponseEntity<String>
+     * @author Nethadun
+     */
     @PostMapping("/publish")
     public ResponseEntity<String> publish(@RequestParam String message) {
         kafkaProducer.sendMessage("my-topic", message);

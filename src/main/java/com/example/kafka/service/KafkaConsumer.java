@@ -12,6 +12,5 @@ public class KafkaConsumer {
     @KafkaListener(topics = "my-topic", groupId = "my-group")
     public void listen(String message) {
         logger.info("Received message: {}", message);
-        // Process the message here
     }
 }
